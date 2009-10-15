@@ -105,6 +105,9 @@
 	else if ([type isEqualToString:@"date"]) {
 		return [NSDate fromXMLDateString:propertyValue];
 	}
+	else if ([type isEqualToString:@"timestamp"]) {
+		return [NSDate fromXMLDateTimeString:propertyValue];
+	}
 	
 	// uncomment this if you what to support NSNumber and NSDecimalNumber
 	// if you do your classId must be a NSNumber since rails will pass it as such
